@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './Certificates.css';
-import Java from '../assets/JAVA.jpg';
-import C from '../assets/C.jpg';
+import Java from '../assets/JAVA.png';
+// import C from '../assets/C.jpg';
+import machine from '../assets/machine.png'
+import web from '../assets/web.png'
+import mscit from '../assets/mscit.png'
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -15,14 +18,27 @@ const Certificates = () => {
       skills: ["Java", "OOP", "Data Structures", "Algorithms"],
       image: Java
     },
-    {
-      title: "C Programming", 
-      
-      date: "2024",
-      description: "Certified in C programming language and system programming",
-      skills: ["C Language", "Pointers", "Memory Management", "System Programming"],
-      image: C
-    }
+     {
+    title: "Machine Learning",
+    date: "2025",
+    description: "Certified in machine learning concepts, model building, and data analysis techniques.",
+    skills: ["Python", "Machine Learning", "Scikit-learn", "Data Analysis"],
+    image: machine
+  },
+  {
+    title: "Web Development",
+    date: "2025",
+    description: "Certified in modern web development, including frontend and backend fundamentals.",
+    skills: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    image: web
+  },
+  {
+  title: "MS-CIT",
+  date: "2022",
+  description: "Successfully completed the Maharashtra State Certificate in Information Technology (MS-CIT) examination with an overall score of 87/100.",
+  skills: ["Computer Fundamentals", "MS Office", "Internet", "Information Technology"],
+  image: mscit
+}
   ];
 
   const openCertificate = (certificate) => {

@@ -1,29 +1,29 @@
 import React, { useState } from 'react';  // ← Add useState
 import './Internships.css';
-import ONGCCertificate from '../assets/ONGC.png';
-import backend from '../assets/download.png';
+import ONGCCertificate from '../assets/ONGC.jpg';
+import backend from '../assets/download.jpg';
 
 const Internships = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);  // ← Add state
 
-  let internships = [
-    {
-      company: "ONGC",
-      role: "Web Development Intern",
-      duration: "May 2025 - July 2025", 
-      description: "Building responsive web applications at ONGC.",
-      skills: ["Js", "PHP", "MySQL", "XAMPP"],
-      certificate: ONGCCertificate
-    },
-    {
-    company: "Sapphire Infocom Pvt Ltd",
-      role: "Backend Developer ", 
-      duration: "Sep 2025 - Dec 2025",
-      description: "Building secure and scalable backend systems with modern technologies.",
-    skills: ["Express.js", "MongoDB", "REST APIs", "Middleware"],
-      certificate: backend // ← Your second certificate
-    }
-  ];
+ let internships = [
+  {
+    company: "Oil and Natural Gas Corporation Limited (ONGC)",
+    role: "Web Development Intern",
+    duration: "Jul 2024 - Aug 2024",
+    description: "Completed a summer internship at ONGC Mumbai, where I developed an Inventory Management System under the guidance of industry professionals.",
+    skills: ["PHP", "MySQL", "JavaScript", "XAMPP"],
+    certificate: ONGCCertificate
+  },
+  {
+    company: "Halliburton Offshore Services Inc.",
+    role: "AI Engineer Intern",
+    duration: "Jun 2025 - Jul 2025",
+    description: "Developed an Intelligent Offline Chatbot for OpenWorks, focusing on enterprise AI solutions and intelligent knowledge retrieval.",
+    skills: ["Python", "LLMs", "NLP", "OpenWorks"],
+    certificate: backend
+  }
+];
   
 
   const openCertificate = (certificate) => {

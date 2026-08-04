@@ -53,7 +53,7 @@ const App = () => {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <span className="logo-text">Ketan</span>
+            <span className="logo-text">Rushabh</span>
           </div>
           <ul className="nav-menu">
             <li className="nav-item">

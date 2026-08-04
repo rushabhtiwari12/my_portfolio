@@ -7,6 +7,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -18,32 +19,48 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    setLoading(true);
 
-  try {
-    const response = await fetch('https://formsubmit.co/ajax/tiwariketan045@gmail.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/tiwarirushabh59@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            _subject: 'New Portfolio Contact Form Submission',
+            _captcha: false,
+          }),
+        }
+      );
 
-    if (response.ok) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    } else {
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        alert(data.message || 'Failed to send message.');
+      }
+    } catch (error) {
+      console.error(error);
       alert('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    alert('Failed to send message. Please try again.');
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
-  // Success message
   if (submitted) {
     return (
       <section id="contact" className="contact-section">
@@ -51,9 +68,10 @@ const Contact = () => {
           <h2 className="section-title">
             Let's Create <span className="accent-text">Magic</span>
           </h2>
+
           <div className="success-message">
             <h3>🎉 Thanks for your message!</h3>
-            <p>I'll get back to you soon. Let's create something amazing together! 💫</p>
+            <p>I'll get back to you as soon as possible.</p>
           </div>
         </div>
       </section>
@@ -66,42 +84,53 @@ const Contact = () => {
         <h2 className="section-title">
           Let's Create <span className="accent-text">Magic</span>
         </h2>
+
         <div className="contact-content">
           <div className="contact-info">
-            <h3 className="contact-subtitle">Ready to make something unforgettable?</h3>
+            <h3 className="contact-subtitle">
+              Ready to make something unforgettable?
+            </h3>
+
             <p className="contact-text">
-              Your next stunning project is just a message away. Let's turn your ideas into reality.
+              Your next stunning project is just a message away. Let's turn
+              your ideas into reality.
             </p>
+
             <div className="contact-methods">
               <div className="contact-method">
                 <div className="method-icon">💌</div>
-                <span>tiwariketan045@gmail.com</span>
+                <span>tiwarirushabh59@gmail.com</span>
               </div>
-              <div className="contact-method">
-                <div className="method-icon">📱</div>
-                <span>+91-9769997106</span>
-              </div>
+
               <div className="contact-method">
                 <div className="method-icon">📍</div>
-               <span>Based in Mumbai, India</span>
+                <span>Based in Mumbai, India</span>
               </div>
+
               <div className="contact-method">
                 <div className="method-icon">💼</div>
-                <a href="https://www.linkedin.com/in/ketan-tiwari-160873316" target="_blank" rel="noopener noreferrer">
-                                    LinkedIn Profile</a>
+                <a
+                  href="https://www.linkedin.com/in/rushabh-tiwari-6541b6286/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn Profile
+                </a>
               </div>
+
               <div className="contact-method">
                 <div className="method-icon">⚡</div>
-               <a 
-  href="https://github.com/ketan223" 
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  GitHub Profile
-</a>
+                <a
+                  href="https://github.com/rushabhtiwari12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profile
+                </a>
               </div>
             </div>
           </div>
+
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input
@@ -114,6 +143,7 @@ const Contact = () => {
                 required
               />
             </div>
+
             <div className="form-group">
               <input
                 type="email"
@@ -125,6 +155,7 @@ const Contact = () => {
                 required
               />
             </div>
+
             <div className="form-group">
               <textarea
                 name="message"
@@ -134,10 +165,15 @@ const Contact = () => {
                 className="form-textarea"
                 rows="5"
                 required
-              ></textarea>
+              />
             </div>
-            <button type="submit" className="submit-btn" disabled={loading}>
-              {loading ? 'Sending... ✨' : 'Send Message ✨'}
+
+            <button
+              type="submit"
+              className="submit-btn"
+              disabled={loading}
+            >
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

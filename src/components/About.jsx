@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import ketan_pic from '../assets/ketan1.jpg';
+import ketan_pic from '../assets/ketan1.png';
 
 const About = () => {
   return (
@@ -12,11 +12,10 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="lead-text">
-              Hi! I'm <span className="highlight">Ketan Tiwari</span>, a passionate  developer with a strong interest in full-stack development and machine learning. I enjoy creating solutions that make a difference.
+              Hi! I'm <span className="highlight">Rushabh Tiwari</span>, a  developer with a strong interest in full-stack development and AIML. I enjoy creating solutions that make a difference.
             </p>
             <p className="description-text">
-              I'm constantly learning new technologies and frameworks to expand my skill set. My goal is to build innovative projects that solve real-world problems while collaborating with like-minded developers.
-            </p>
+I'm Rushabh Tiwari, an Information Technology Engineer passionate about Artificial Intelligence, Machine Learning, Data Analytics, and Full-Stack Development. I transform ideas into intelligent, scalable applications through clean code, data-driven insights, and innovative technologies            </p>
             <div className="stats-grid">
               <div className="stat-item">
                 <div className="stat-number">10+</div>

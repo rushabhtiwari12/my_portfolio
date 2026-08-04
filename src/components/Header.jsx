@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => {
   const [text, setText] = useState('');
-  const fullText = "Ketan DilipKumar Tiwari";
+  const fullText = "Rushabh  Tiwari";
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Header = () => {
           <span className="cursor">|</span>
         </h1>
         <p className="sexy-tagline">
-          Full-Stack Developer | ML & AI Enthusiast | Passionate About Growth
+          Full-Stack Developer | ML & AI  | Passionate About Growth
         </p>
         <div className="header-buttons">
           <button className="sexy-btn primary" onClick={() => scrollToSection('projects')}>

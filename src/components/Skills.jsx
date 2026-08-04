@@ -2,28 +2,59 @@ import React from 'react';
 import './Skills.css';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Languages",
-      skills: ["Java", "JavaScript", "Python", "C", "SQL"]
-    },
-    {
-      title: "Frameworks & Libraries",
-      skills: ["React.js", "Node.js", "Express.js", "Flask", "Pandas", "Matplotlib", "Scikit-learn"]
-    },
-    {
-      title: "Tools & Technologies", 
-      skills: ["VS Code", "IntelliJ IDEA", "PyCharm", "Git", "GitHub", "MongoDB", "MySQL"]
-    },
-    {
-      title: "Knowledge  ",
-      skills: ["Web Development", "Machine Learning", "Natural Language Processing", "Data Structures Algorithms", "Responsive Design", "REST APIs","HTML5", "CSS3"]
-    },
-    {
-      title: "Soft Skills",
-      skills: ["Leadership", "Event Management", "Writing", "Public Speaking", "Time Management", "Teamwork"]
-    }
-  ];
+ const skillCategories = [
+  {
+    title: "Programming Languages",
+    skills: [
+      "Python",
+      "Java",
+      "SQL"
+    ]
+  },
+  
+  {
+    title: "Tools & Platforms",
+    skills: [
+      "Power BI",
+      "Git",
+      "GitHub",
+      "Visual Studio Code",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    title: "AI & Machine Learning",
+    skills: [
+      "Large Language Models (LLMs)",
+      "Retrieval-Augmented Generation (RAG)",
+      "Generative AI",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing (NLP)"
+    ]
+  },
+  {
+    title: "Software Development",
+    skills: [
+      "Backend Development",
+      "REST APIs",
+      "Object-Oriented Programming (OOP)",
+      "Data Structures & Algorithms (DSA)",
+      "Software Development Life Cycle (SDLC)"
+    ]
+  },
+  {
+    title: "Professional Skills",
+    skills: [
+      "Problem Solving",
+      "Analytical Thinking",
+      "Communication",
+      "Team Collaboration",
+      "Leadership",
+      "Time Management"
+    ]
+  }
+];
 
   return (
     <section id="skills" className="skills-section">
