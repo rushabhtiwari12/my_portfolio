@@ -47,7 +47,7 @@ body {
   height: 4px;
   background: #ff6ec4;
   border-radius: 50%;
-  animation: float 20s infinite linear;
+  animation: float 15s infinite linear;
   opacity: 0.6;
 }
 
